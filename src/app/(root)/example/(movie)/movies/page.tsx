@@ -1,5 +1,5 @@
 import React from 'react'
-import MovieList from '@/ui/domain/posts/components/templates/MovieList'
+import MovieList from '@/ui/domain/movies/components/templates/MovieList'
 import MovieRepository from '@/repository/movies/MovieRepository'
 
 interface Props {}

@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
-import MovieDetailOfPlain from '@/ui/domain/post/components/organisms/MovieDetailOfPlain'
-import MovieDetailOfVideo from '@/ui/domain/post/components/organisms/MovieDetailOfVideo'
-import MovieLoading from '@/ui/domain/posts/components/molecules/MovieLoading'
+import MovieDetailOfPlain from '@/ui/domain/movie/components/organisms/MovieDetailOfPlain'
+import MovieDetailOfVideo from '@/ui/domain/movie/components/organisms/MovieDetailOfVideo'
+import MovieLoading from '@/ui/domain/movies/components/molecules/MovieLoading'
 
 interface Props {
   movieId: number

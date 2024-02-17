@@ -1,5 +1,5 @@
 import React from 'react'
-import PostDetail from '@/ui/domain/post/components/templates/PostDetail'
+import MovieDetail from '@/ui/domain/post/components/templates/MovieDetail'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ type PageSearchParams = {}
 interface Props extends NextPageProps<PageParams, PageSearchParams> {}
 
 const Page = ({ params, searchParams }: Props) => {
-  return <PostDetail />
+  return <MovieDetail />
 }
 
 export default Page

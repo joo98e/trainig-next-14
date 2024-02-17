@@ -1,10 +1,10 @@
 import React from 'react'
-import PostList from '@/ui/domain/posts/components/templates/PostList'
+import MovieList from '@/ui/domain/posts/components/templates/MovieList'
 
 interface Props {}
 
 const Page = ({}: Props) => {
-  return <PostList />
+  return <MovieList />
 }
 
 export default Page

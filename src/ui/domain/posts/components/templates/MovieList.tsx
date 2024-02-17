@@ -2,8 +2,8 @@ import React from 'react'
 
 interface Props {}
 
-const PostList = ({}: Props) => {
+const MovieList = ({}: Props) => {
   return <div />
 }
 
-export default PostList
+export default MovieList

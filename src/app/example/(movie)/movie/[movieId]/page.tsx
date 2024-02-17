@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 }
 
 type PageParams = {
-  postId: string
+  movieId: string
 }
 
 type PageSearchParams = {}

@@ -1,4 +1,4 @@
-export interface MovieResponse {
+export interface MovieSummaryResponse {
   adult: boolean
   backdrop_path: string
   genre_ids: number[]

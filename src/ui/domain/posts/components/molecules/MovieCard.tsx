@@ -1,10 +1,10 @@
 import React from 'react'
-import { MovieResponse } from '@/repository/movies/types/MovieResponse'
+import { MovieSummaryResponse } from '@/repository/movies/types/MovieSummaryResponse'
 import Link from 'next/link'
 import InternalLinker from '@/utils/InternalLinker'
 
 interface Props {
-  movie: MovieResponse
+  movie: MovieSummaryResponse
 }
 
 const MovieCard = ({ movie }: Props) => {

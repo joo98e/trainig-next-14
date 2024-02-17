@@ -23,6 +23,7 @@ const Navigation = ({}: Props) => {
       <li>{renderLink('/', 'Home')}</li>
       <li>{renderLink('/example/v1', 'Example V1')}</li>
       <li>{renderLink('/example/v2', 'Example V2')}</li>
+      <li>{renderLink('/example/movies', 'view all movies')}</li>
     </ul>
   )
 }

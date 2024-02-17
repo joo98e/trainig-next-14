@@ -1,9 +1,9 @@
 import ApiRequest from '@/repository/common/ApiRequest'
-import { MovieResponses } from '@/repository/movies/types/MovieResponses'
+import { MovieResponse } from '@/repository/movies/types/MovieResponse'
 
 export default class MovieRepository {
   static async findAllMovies() {
     const apiRequest = ApiRequest.init('/movies')
-    return await apiRequest.call<MovieResponses>()
+    return await apiRequest.call<MovieResponse[]>()
   }
 }

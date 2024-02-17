@@ -9,8 +9,8 @@ interface Props {
   color?: Color
 }
 
-const BdsTypography = ({ variant, color, children }: Props) => {
-  function render(): ReactNode {
+const BdsTypography = ({ variant, children, color }: Props) => {
+  function render(children: ReactNode): ReactNode {
     switch (variant) {
       case 'heading1':
         return <h1>{children}</h1>
@@ -27,7 +27,7 @@ const BdsTypography = ({ variant, color, children }: Props) => {
     }
   }
 
-  return render()
+  return render(children)
 }
 
 export default BdsTypography

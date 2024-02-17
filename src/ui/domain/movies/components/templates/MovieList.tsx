@@ -1,6 +1,6 @@
 import React from 'react'
 import { MovieSummaryResponse } from '@/repository/movies/types/MovieSummaryResponse'
-import MovieCard from '@/ui/domain/posts/components/molecules/MovieCard'
+import MovieCard from '@/ui/domain/movies/components/molecules/MovieCard'
 
 interface Props {
   movies: MovieSummaryResponse[]

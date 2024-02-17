@@ -1,7 +1,7 @@
 import React from 'react'
 import { Metadata } from 'next'
 import { redirect } from 'next/navigation'
-import MovieDetailTemplate from '@/ui/domain/post/components/templates/MovieDetailTemplate'
+import MovieDetailTemplate from '@/ui/domain/movie/components/templates/MovieDetailTemplate'
 
 export const metadata: Metadata = {
   title: 'Post',

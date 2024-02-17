@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import Navigation from '@/ui/domain/navigation/Navigation'
 import { Metadata } from 'next'
+import '../ui/assets/global.css'
 
 export const metadata: Metadata = {
   title: {

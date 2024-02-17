@@ -1,20 +1,28 @@
+'use client'
+
 import React from 'react'
 import BdsLinker from '@/ui/bds/components/linker'
+import { usePathname } from 'next/navigation'
 
 interface Props {}
 
 const Navigation = ({}: Props) => {
+  const currentPathname = usePathname()
+
+  function renderLink(pathname: string, text: string) {
+    return (
+      <BdsLinker href={pathname}>
+        {text} {pathname === currentPathname ? '🔥' : ''}
+      </BdsLinker>
+    )
+  }
+
   return (
     <ul>
-      <li>
-        <BdsLinker href={'/'}>Home</BdsLinker>
-      </li>
-      <li>
-        <BdsLinker href={'/example/v1'}>Example V1</BdsLinker>
-      </li>
-      <li>
-        <BdsLinker href={'/example/v2'}>Example V2</BdsLinker>
-      </li>
+      <li>currentPathname : {currentPathname}</li>
+      <li>{renderLink('/', 'Home')}</li>
+      <li>{renderLink('/example/v1', 'Example V1')}</li>
+      <li>{renderLink('/example/v2', 'Example V2')}</li>
     </ul>
   )
 }

@@ -1,5 +1,10 @@
 import React from 'react'
 import BdsTypography from '@/ui/bds/components/typography/index'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Example v2',
+}
 
 interface Props {}
 

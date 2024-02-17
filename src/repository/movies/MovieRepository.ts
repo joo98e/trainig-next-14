@@ -21,6 +21,7 @@ export default class MovieRepository {
   static async findMovieVideoById(movieId: number) {
     const apiRequest = ApiRequest.init(`/movies/${movieId}/videos`)
     await Thread.sleep(1000)
+    throw new Error('Oops! Something went wrong. Please try again later.')
     return await apiRequest.call<MovieDetailVideoResponse[]>()
   }
 

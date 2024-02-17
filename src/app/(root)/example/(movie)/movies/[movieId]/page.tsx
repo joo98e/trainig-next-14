@@ -16,7 +16,7 @@ type PageSearchParams = {}
 
 interface Props extends NextPageProps<PageParams, PageSearchParams> {}
 
-const Page = async ({ params, searchParams }: Props) => {
+const Page = ({ params, searchParams }: Props) => {
   if (!params?.movieId || isNaN(Number(params.movieId))) {
     return redirect('/400')
   }

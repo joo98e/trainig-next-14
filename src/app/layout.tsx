@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react'
-import Navigation from '@/ui/domain/navigation/Navigation'
 import { Metadata } from 'next'
 import '../ui/assets/global.css'
 
@@ -18,10 +17,7 @@ interface RootLayoutProps {
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang={'ko'}>
-      <body>
-        <Navigation />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   )
 }

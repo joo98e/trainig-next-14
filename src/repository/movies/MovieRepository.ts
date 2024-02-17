@@ -4,6 +4,7 @@ import { MovieDetailResponse } from '@/repository/movies/types/MovieDetailRespon
 import { MovieDetailVideoResponse } from '@/repository/movies/types/MovieDetailVideoResponse'
 import { MovieDetailCreditResponse } from '@/repository/movies/types/MovieDetailCreditResponse'
 import { MovieDetailSimilarResponse } from '@/repository/movies/types/MovieDetailSimilarResponse'
+import Thread from '@/repository/common/Thread'
 
 export default class MovieRepository {
   static async findAllMovies() {
@@ -13,11 +14,13 @@ export default class MovieRepository {
 
   static async findMovieById(movieId: number) {
     const apiRequest = ApiRequest.init(`/movies/${movieId}`)
+    await Thread.sleep(400)
     return await apiRequest.call<MovieDetailResponse>()
   }
 
   static async findMovieVideoById(movieId: number) {
     const apiRequest = ApiRequest.init(`/movies/${movieId}/videos`)
+    await Thread.sleep(1000)
     return await apiRequest.call<MovieDetailVideoResponse[]>()
   }
 

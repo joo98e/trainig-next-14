@@ -3,18 +3,17 @@ import BdsTypography from '@/ui/bds/components/typography/index'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Not Found',
+  title: 'Example v1',
 }
+
 interface Props {}
 
-const NotFound = ({}: Props) => {
+const Page = ({}: Props) => {
   return (
     <div>
-      <BdsTypography variant={'heading1'} color={'#bd1818'}>
-        Not Found
-      </BdsTypography>
+      <BdsTypography variant={'heading2'}>is Example V1 Page.</BdsTypography>
     </div>
   )
 }
 
-export default NotFound
+export default Page

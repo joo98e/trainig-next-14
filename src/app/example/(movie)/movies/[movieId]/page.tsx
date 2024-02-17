@@ -1,8 +1,7 @@
 import React from 'react'
-import MovieDetail from '@/ui/domain/post/components/templates/MovieDetail'
 import { Metadata } from 'next'
-import MovieRepository from '@/repository/movies/MovieRepository'
 import { redirect } from 'next/navigation'
+import MovieDetailTemplate from '@/ui/domain/post/components/templates/MovieDetailTemplate'
 
 export const metadata: Metadata = {
   title: 'Post',
@@ -18,17 +17,12 @@ type PageSearchParams = {}
 interface Props extends NextPageProps<PageParams, PageSearchParams> {}
 
 const Page = async ({ params, searchParams }: Props) => {
-  if (!params?.movieId || isNaN(+params.movieId)) {
+  if (!params?.movieId || isNaN(Number(params.movieId))) {
     return redirect('/400')
   }
 
-  const movieResponse = await MovieRepository.findMovieById(+params.movieId)
-
-  if (!movieResponse) {
-    return redirect('/404')
-  }
-
-  return <MovieDetail movie={movieResponse} />
+  const movieId = Number(params?.movieId)
+  return <MovieDetailTemplate movieId={movieId} />
 }
 
 export default Page

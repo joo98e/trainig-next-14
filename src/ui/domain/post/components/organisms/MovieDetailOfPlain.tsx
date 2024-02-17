@@ -1,12 +1,19 @@
 import React from 'react'
-import { MovieDetailResponse } from '@/repository/movies/types/MovieDetailResponse'
 import BdsLinker from '@/ui/bds/components/linker'
+import MovieRepository from '@/repository/movies/MovieRepository'
+import { redirect } from 'next/navigation'
 
 interface Props {
-  movie: MovieDetailResponse
+  movieId: number
 }
 
-const MovieDetail = ({ movie }: Props) => {
+const MovieDetailOfPlain = async ({ movieId }: Props) => {
+  const movie = await MovieRepository.findMovieById(movieId)
+
+  if (!movie) {
+    return redirect('/404')
+  }
+
   return (
     <div className="max-w-md  bg-white rounded-xl shadow-md overflow-hidden md:max-w-4xl m-4">
       <div className="md:flex">
@@ -33,4 +40,4 @@ const MovieDetail = ({ movie }: Props) => {
   )
 }
 
-export default MovieDetail
+export default MovieDetailOfPlain

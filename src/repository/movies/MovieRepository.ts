@@ -16,28 +16,17 @@ export default class MovieRepository {
     return await apiRequest.call<MovieDetailResponse>()
   }
 
-  static async findMovieMoreInfoById(movieId: number, type: 'video' | 'credits' | 'similar') {
-    switch (type) {
-      case 'video':
-        return await this.findMovieVideoById(movieId)
-      case 'credits':
-        return await this.findMovieCreditsById(movieId)
-      case 'similar':
-        return await this.findMovieSimilarById(movieId)
-    }
-  }
-
-  private static async findMovieVideoById(movieId: number) {
+  static async findMovieVideoById(movieId: number) {
     const apiRequest = ApiRequest.init(`/movies/${movieId}/videos`)
     return await apiRequest.call<MovieDetailVideoResponse[]>()
   }
 
-  private static async findMovieCreditsById(movieId: number) {
+  static async findMovieCreditsById(movieId: number) {
     const apiRequest = ApiRequest.init(`/movies/${movieId}/credits`)
     return await apiRequest.call<MovieDetailCreditResponse[]>()
   }
 
-  private static async findMovieSimilarById(movieId: number) {
+  static async findMovieSimilarById(movieId: number) {
     const apiRequest = ApiRequest.init(`/movies/${movieId}/similar`)
     return await apiRequest.call<MovieDetailSimilarResponse[]>()
   }

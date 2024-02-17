@@ -5,9 +5,21 @@
     "target": "es2016",
     /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
     "module": "commonjs",
-    // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@bds/*": [
+        "./src/assets/bds/components/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ]
+    },
+    "types": [
+      "src/types"
+    ],
     // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
-    // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

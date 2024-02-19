@@ -4,6 +4,7 @@
     "@typescript-eslint"
   ],
   "extends": [
+    "next",
     "eslint:recommended",
     "plugin:prettier/recommended"
   ],

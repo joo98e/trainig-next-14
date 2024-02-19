@@ -1,5 +1,6 @@
 import React from 'react'
-import { BdsTypographyVariantArray } from './index.d'
+
+const BdsTypographyVariantArray = ['heading1', 'heading2', 'heading3', 'heading4', 'body1', 'body2', 'body3', 'body4'] as const
 
 type BdsTypographyVariant = (typeof BdsTypographyVariantArray)[number]
 
@@ -9,7 +10,7 @@ interface Props {
   color?: Color
 }
 
-const BdsTypography = ({ variant, children, color }: Props) => {
+const BdsTypography = ({ variant, children }: Props) => {
   function render(children: ReactNode): ReactNode {
     switch (variant) {
       case 'heading1':
